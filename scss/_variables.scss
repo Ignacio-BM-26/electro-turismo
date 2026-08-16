@@ -1,9 +1,31 @@
+// ========================================
+// VARIABLES - ELECTRO TURISMO
+// ========================================
 
-// _variables.scss
-$text-color: #b6bcd6;
-$link-hover-color: #c8d4e4;
-$header-bg-color: #222;
-$primary-color: #03273f;
-$secondary-color: #b6bcd6;
-$spacing: 20px;
-$font-family: 'Poppins', sans-serif;
+// Colores principales
+$color-primary: #172e44;
+$color-secondary: #f5f8fa;
+$color-accent: #007bff;
+$color-accent-hover: #005fc7;
+
+$color-white: #ffffff;
+$color-black: #111111;
+$color-gray: #667085;
+$color-light-gray: #e8edf2;
+
+// Tipografía
+$font-family: "Montserrat", sans-serif;
+
+// Tamaños
+$container-width: 1200px;
+
+// Bordes
+$border-radius: 12px;
+$border-radius-small: 8px;
+
+// Sombras
+$shadow-card: 0 8px 25px rgba(0, 0, 0, 0.08);
+$shadow-header: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+// Transiciones
+$transition: 0.3s ease;

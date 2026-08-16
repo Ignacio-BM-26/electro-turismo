@@ -1,0 +1,168 @@
+@use "variables";
+
+// ========================================
+// HERO
+// ========================================
+
+.hero {
+  width: 100%;
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    url("../img/viajes/portada.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+
+  // Contenedor del contenido
+  &__content {
+    width: min(100% - 40px, variables.$container-width);
+    margin: 0 auto;
+
+    padding: 100px 0;
+
+    color: variables.$color-white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  // Pequeño texto superior
+  &__eyebrow {
+    margin-bottom: 20px;
+
+    color: variables.$color-accent;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  // Título principal
+  &__title {
+    max-width: 750px;
+
+    margin-bottom: 25px;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    span {
+      display: block;
+      color: variables.$color-accent;
+    }
+  }
+
+  // Descripción
+  &__description {
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  // Botones
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+// ========================================
+// BOTONES
+// ========================================
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+
+  padding: 0 25px;
+
+  border-radius: variables.$border-radius-small;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    background-color variables.$transition,
+    color variables.$transition,
+    transform variables.$transition,
+    border-color variables.$transition;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  // Botón principal
+  &--primary {
+    background-color: variables.$color-accent;
+    color: variables.$color-white;
+
+    &:hover {
+      background-color: variables.$color-accent-hover;
+    }
+  }
+
+  // Botón secundario
+  &--secondary {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    color: variables.$color-white;
+
+    &:hover {
+      background-color: variables.$color-white;
+      border-color: variables.$color-white;
+      color: variables.$color-primary;
+    }
+  }
+
+  // Botón outline
+  &--outline {
+    border: 1px solid variables.$color-primary;
+
+    color: variables.$color-primary;
+
+    &:hover {
+      background-color: variables.$color-primary;
+      color: variables.$color-white;
+    }
+  }
+
+  // Botón claro
+  &--light {
+    background-color: variables.$color-white;
+    color: variables.$color-primary;
+
+    &:hover {
+      background-color: variables.$color-light-gray;
+    }
+  }
+}

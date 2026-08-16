@@ -1,0 +1,411 @@
+@use "variables";
+
+.section-header {
+  width: min(100% - 40px, variables.$container-width);
+  margin: 0 auto 48px;
+  text-align: center;
+
+  &__eyebrow {
+    display: block;
+    margin-bottom: 12px;
+    color: variables.$color-accent;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+  }
+
+  &__title {
+    color: variables.$color-primary;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+  }
+
+  &__description {
+    max-width: 620px;
+    margin: 18px auto 0;
+    color: variables.$color-gray;
+    line-height: 1.7;
+  }
+}
+
+.featured-trips,
+.why-us,
+.destinations {
+  padding: 100px 0;
+}
+
+.featured-trips,
+.destinations {
+  background-color: variables.$color-secondary;
+}
+
+.trips-grid,
+.benefits-grid,
+.destinations-grid {
+  width: min(100% - 40px, variables.$container-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.trips-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.trip-card {
+  overflow: hidden;
+  background-color: variables.$color-white;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$shadow-card;
+  transition: transform variables.$transition, box-shadow variables.$transition;
+
+  &:hover {
+    box-shadow: 0 16px 35px rgba(23, 46, 68, 0.16);
+    transform: translateY(-8px);
+  }
+
+  &__image {
+    height: 240px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  &:hover &__image img {
+    transform: scale(1.06);
+  }
+
+  &__content {
+    padding: 28px;
+  }
+
+  &__category {
+    color: variables.$color-accent;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+  }
+
+  &__title {
+    margin: 10px 0 12px;
+    color: variables.$color-primary;
+    font-size: 1.45rem;
+  }
+
+  &__description {
+    min-height: 78px;
+    color: variables.$color-gray;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 22px;
+    color: variables.$color-primary;
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: color variables.$transition, transform variables.$transition;
+
+    &:hover {
+      color: variables.$color-accent;
+      transform: translateX(4px);
+    }
+  }
+}
+
+.section-action {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.why-us {
+  background-color: variables.$color-white;
+}
+
+.benefits-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.benefit {
+  padding: 30px 20px;
+  text-align: center;
+
+  &__icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 20px;
+    display: grid;
+    place-items: center;
+    background-color: #eaf4ff;
+    border-radius: 50%;
+    font-size: 1.7rem;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: variables.$color-primary;
+    font-size: 1.1rem;
+  }
+
+  &__text {
+    color: variables.$color-gray;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+}
+
+.destinations-grid {
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-auto-rows: 360px;
+}
+
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: variables.$border-radius;
+  isolation: isolate;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(10, 25, 38, 0.8), rgba(10, 25, 38, 0.06) 65%);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.07);
+  }
+
+  &__overlay {
+    position: absolute;
+    right: 28px;
+    bottom: 26px;
+    left: 28px;
+    z-index: 2;
+    color: variables.$color-white;
+
+    span {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+
+    h3 {
+      margin-top: 5px;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.contact-cta {
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #102c47, #1e5d86);
+  color: variables.$color-white;
+
+  &__content {
+    width: min(100%, 720px);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    color: #8fd0ff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+  }
+
+  &__title {
+    margin: 14px 0 18px;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+  }
+}
+
+.page-hero {
+  padding: 105px 20px;
+  background: linear-gradient(120deg, #102c47, #2677a9);
+  color: variables.$color-white;
+
+  &__content {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    display: block;
+    margin-bottom: 15px;
+    color: #9fdaff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.08;
+  }
+
+  p {
+    max-width: 620px;
+    margin: 22px auto 0;
+    color: rgba(255, 255, 255, 0.84);
+    line-height: 1.7;
+  }
+}
+
+.travel-list {
+  padding: 96px 0;
+
+  &__container {
+    width: min(100% - 40px, 1080px);
+    margin: 0 auto;
+    display: grid;
+    gap: 72px;
+  }
+}
+
+.travel-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background-color: variables.$color-white;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$shadow-card;
+
+  &--reverse .travel-detail__image { order: 2; }
+
+  &__image {
+    min-height: 380px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: clamp(32px, 5vw, 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__country {
+    color: variables.$color-accent;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  h2 {
+    margin: 12px 0 16px;
+    color: variables.$color-primary;
+    font-size: clamp(1.8rem, 3vw, 2.55rem);
+  }
+
+  p {
+    color: variables.$color-gray;
+    line-height: 1.7;
+  }
+
+  &__features {
+    margin: 25px 0 30px;
+    display: grid;
+    gap: 12px;
+    color: variables.$color-primary;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    li { padding-left: 22px; position: relative; }
+    li::before { content: "✓"; position: absolute; left: 0; color: variables.$color-accent; font-weight: 800; }
+  }
+}
+
+.departure-section {
+  padding: clamp(32px, 5vw, 60px);
+  background-color: #f7fbfd;
+  border: 1px solid #d9e7ef;
+  border-radius: variables.$border-radius;
+
+  &__heading {
+    max-width: 720px;
+    margin: 0 auto 34px;
+    text-align: center;
+
+    > span {
+      color: variables.$color-accent;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    h2 { margin: 10px 0 12px; color: variables.$color-primary; font-size: clamp(1.8rem, 3vw, 2.5rem); }
+    p { color: variables.$color-gray; line-height: 1.6; }
+  }
+
+  &__actions { margin-top: 34px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+}
+
+.departure-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  &--single {
+    grid-template-columns: minmax(0, 360px);
+    justify-content: center;
+  }
+}
+
+.departure-card {
+  min-height: 158px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: variables.$color-white;
+  border: 1px solid #dce6ec;
+  border-radius: variables.$border-radius-small;
+
+  strong { color: variables.$color-primary; font-size: 1.05rem; }
+  span { margin-top: 8px; color: #a15f00; font-size: 0.84rem; font-weight: 700; line-height: 1.4; }
+  p { margin: 12px 0 auto; color: variables.$color-gray; font-size: 0.88rem; }
+  b { margin-top: 14px; color: variables.$color-accent; font-size: 1.18rem; }
+
+  &--featured { border-color: #f0c468; background: #fffaf0; }
+}
+
+.departure-includes {
+  margin-top: 28px;
+  padding: 28px;
+  background: #eaf4ff;
+  border-radius: variables.$border-radius-small;
+  text-align: center;
+
+  h3 { color: variables.$color-primary; font-size: 1.1rem; }
+  ul { margin-top: 14px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; color: variables.$color-gray; font-size: 0.9rem; line-height: 1.5; }
+  li { max-width: 270px; }
+}

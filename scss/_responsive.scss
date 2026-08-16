@@ -1,12 +1,32 @@
 
-/* Responsividad index */
-@media (max-width: 768px) {
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    .img-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+@media (max-width: 900px) {
+  .header__menu { gap: 16px; }
+  .trips-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .destinations-grid { grid-template-columns: 1fr 1fr; }
+  .destination-card--large { grid-column: span 2; }
+  .departure-grid { grid-template-columns: repeat(2, 1fr); }
+  .departure-grid--single { grid-template-columns: minmax(0, 360px); }
+}
+
+@media (max-width: 680px) {
+  .header__container { min-height: auto; padding: 16px 0; flex-wrap: wrap; }
+  .header__nav { order: 3; width: 100%; overflow-x: auto; }
+  .header__menu { width: max-content; gap: 20px; }
+  .header__cta { padding: 10px 14px; }
+  .header__logo img { width: 125px; }
+  .hero { min-height: 560px; }
+  .hero__content { padding: 80px 0; }
+  .hero__title { font-size: clamp(2.7rem, 13vw, 4rem); letter-spacing: -1.5px; }
+  .featured-trips, .why-us, .destinations, .contact-cta { padding-top: 72px; padding-bottom: 72px; }
+  .section-header { margin-bottom: 34px; }
+  .trips-grid, .benefits-grid, .destinations-grid { grid-template-columns: 1fr; }
+  .destination-card--large { grid-column: auto; }
+  .destinations-grid { grid-auto-rows: 280px; }
+  .trip-card__description { min-height: 0; }
+  .footer__container { grid-template-columns: 1fr; gap: 34px; }
+  .travel-detail { grid-template-columns: 1fr; }
+  .travel-detail--reverse .travel-detail__image { order: 0; }
+  .travel-detail__image { min-height: 270px; }
+  .departure-grid { grid-template-columns: 1fr; }
+}

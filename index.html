@@ -1,92 +1,570 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre las mejores gorras, viseras y remeras oversize en The Urban Clothes. Estilo único y comodidad para todos.">
-    
+
+    <meta name="description"
+        content="Electro Turismo - Encontrá tu próximo viaje. Descubrí destinos, promociones y experiencias para viajar.">
+
+    <title>Electro Turismo | Tu próximo viaje empieza acá</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- CSS personalizado -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Inicio - ELECTRO TURISMO</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
-<body>
-    <header class="d-flex justify-content-between align-items-center p-3 bg-dark">
-        <!-- Logo -->
-        <div class="logo-container">
-            <a href="./index.html">
-                <img src="./img/alta-pinta (2).png" alt="Logo The Urban Clothes" class="img-fluid" style="width: 60px;">
+
+<body id="top">
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header">
+
+        <div class="header__container">
+
+            <!-- Logo -->
+
+            <a href="./index.html" class="header__logo">
+                <img src="./img/logo/logo.png" alt="Electro Turismo">
             </a>
-        </div>
-        <!-- Navegación -->
-        <nav class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-light" href="./index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="./pages/productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="./pages/nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="./pages/contactos.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="./pages/carrito.html">Carrito</a></li>
+
+
+            <!-- Navegación -->
+
+            <nav class="header__nav" aria-label="Navegación principal">
+
+                <ul class="header__menu">
+
+                    <li class="header__item">
+                        <a href="./index.html" class="header__link header__link--active">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a href="./pages/viajes.html" class="header__link">
+                            Viajes
+                        </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a href="#nosotros" class="header__link">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a href="#contacto" class="header__link">
+                            Contacto
+                        </a>
+                    </li>
+
                 </ul>
-            </div>
-        </nav>
+
+            </nav>
+
+
+            <!-- Botón de contacto -->
+
+            <a href="#contacto" class="header__cta">
+                Consultanos
+            </a>
+
+        </div>
+
     </header>
-    
-    <main class="container text-center py-5">
-        <h1 class="titulo-principal">Explora tu estilo único</h1>
-        <p class="subtitulo">Estilo, comodidad y calidad en un solo lugar. ¡Elegí el tuyo hoy!</p>
-        
-        <div class="row align-items-center py-4">
-            <div class="col-md-6">
-                <img src="img/Gorra-vintagerosa.jpg" alt="Gorra vintage rosa" class="img-fluid rounded">
+
+
+    <!-- ==============================
+         CONTENIDO PRINCIPAL
+    =============================== -->
+
+    <main>
+
+
+        <!-- ==============================
+             HERO
+        =============================== -->
+
+        <section class="hero">
+
+            <div class="hero__content">
+
+                <span class="hero__eyebrow">
+                    ELECTRO TURISMO
+                </span>
+
+                <h1 class="hero__title">
+                    Tu próximo viaje
+                    <span>empieza acá.</span>
+                </h1>
+
+                <p class="hero__description">
+                    Descubrí destinos increíbles, encontrá tu próxima aventura
+                    y viajá con la tranquilidad de tenernos siempre cerca.
+                </p>
+
+                <div class="hero__actions">
+
+                    <a href="#viajes" class="button button--primary">
+                        Ver viajes
+                    </a>
+
+                    <a href="#destinos" class="button button--secondary">
+                        Explorar destinos
+                    </a>
+
+                </div>
+
             </div>
-            <div class="col-md-6">
-                <h2>Gorras y viseras</h2>
-                <p>Protege tu estilo bajo el sol con nuestra colección de gorras y viseras diseñadas para cada ocasión.</p>
+
+        </section>
+
+
+        <!-- ==============================
+             VIAJES DESTACADOS
+        =============================== -->
+
+        <section class="featured-trips" id="viajes">
+
+            <div class="section-header">
+
+                <span class="section-header__eyebrow">
+                    ELEGÍ TU PRÓXIMA ESCAPADA
+                </span>
+
+                <h2 class="section-header__title">
+                    Viajes destacados
+                </h2>
+
+                <p class="section-header__description">
+                    Algunas de nuestras próximas salidas.
+                    Encontrá la que más te guste y consultanos.
+                </p>
+
             </div>
-        </div>
-      
-        <div class="row align-items-center py-4">
-            <div class="col-md-6 order-md-2">
-                <img src="./img/remera-oversize-clara.jpg" alt="Remera oversize clara" class="img-fluid rounded">
+
+
+            <div class="trips-grid">
+
+
+                <!-- Viaje 1 -->
+
+                <article class="trip-card">
+
+                    <div class="trip-card__image">
+                        <img src="./img/viajes/cataratas.jpg"
+                            alt="Cataratas del Iguazú">
+                    </div>
+
+                    <div class="trip-card__content">
+
+                        <span class="trip-card__category">
+                            ARGENTINA
+                        </span>
+
+                        <h3 class="trip-card__title">
+                            Cataratas del Iguazú
+                        </h3>
+
+                        <p class="trip-card__description">
+                            Últimas salidas 2026 para conocer una de las
+                            maravillas naturales del mundo.
+                        </p>
+
+                        <a href="./pages/viajes.html#salidas-cataratas" class="trip-card__link">
+                            Ver viaje →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Viaje 2 -->
+
+                <article class="trip-card">
+
+                    <div class="trip-card__image">
+                        <img src="./img/viajes/bariloche.jpg"
+                            alt="Bariloche">
+                    </div>
+
+                    <div class="trip-card__content">
+
+                        <span class="trip-card__category">
+                            ARGENTINA
+                        </span>
+
+                        <h3 class="trip-card__title">
+                            Bariloche
+                        </h3>
+
+                        <p class="trip-card__description">
+                            Paisajes, montaña y una experiencia
+                            inolvidable en la Patagonia.
+                        </p>
+
+                        <a href="./pages/viajes.html#bariloche" class="trip-card__link">
+                            Ver viaje →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Viaje 3 -->
+
+                <article class="trip-card">
+
+                    <div class="trip-card__image">
+                        <img src="./img/viajes/camboriu.jpg"
+                            alt="Camboriú">
+                    </div>
+
+                    <div class="trip-card__content">
+
+                        <span class="trip-card__category">
+                            BRASIL
+                        </span>
+
+                        <h3 class="trip-card__title">
+                            Camboriú
+                        </h3>
+
+                        <p class="trip-card__description">
+                            Salidas 2027, playas y días para disfrutar
+                            de Brasil con Electro Turismo.
+                        </p>
+
+                        <a href="./pages/viajes.html#salidas-camboriu" class="trip-card__link">
+                            Ver viaje →
+                        </a>
+
+                    </div>
+
+                </article>
+
             </div>
-            <div class="col-md-6 order-md-1">
-                <h2>¡No te quedes sin la tuya!</h2>
-                <p>Luce con confianza, viste con actitud. Nuestra colección te espera.</p>
+
+
+            <div class="section-action">
+
+                <a href="./pages/viajes.html" class="button button--outline">
+                    Ver todos los viajes
+                </a>
+
             </div>
-        </div>
+
+        </section>
+
+
+        <!-- ==============================
+             POR QUÉ ELEGIRNOS
+        =============================== -->
+
+        <section class="why-us" id="nosotros">
+
+            <div class="section-header">
+
+                <span class="section-header__eyebrow">
+                    VIAJÁ CON TRANQUILIDAD
+                </span>
+
+                <h2 class="section-header__title">
+                    ¿Por qué viajar con Electro Turismo?
+                </h2>
+
+            </div>
+
+
+            <div class="benefits-grid">
+
+
+                <article class="benefit">
+
+                    <div class="benefit__icon">
+                        ✈
+                    </div>
+
+                    <h3 class="benefit__title">
+                        Experiencia
+                    </h3>
+
+                    <p class="benefit__text">
+                        Organizamos cada viaje pensando en que
+                        disfrutes desde el primer momento.
+                    </p>
+
+                </article>
+
+
+                <article class="benefit">
+
+                    <div class="benefit__icon">
+                        🤝
+                    </div>
+
+                    <h3 class="benefit__title">
+                        Atención personalizada
+                    </h3>
+
+                    <p class="benefit__text">
+                        Estamos para ayudarte a elegir el viaje
+                        que mejor se adapte a vos.
+                    </p>
+
+                </article>
+
+
+                <article class="benefit">
+
+                    <div class="benefit__icon">
+                        💳
+                    </div>
+
+                    <h3 class="benefit__title">
+                        Opciones de pago
+                    </h3>
+
+                    <p class="benefit__text">
+                        Consultanos las diferentes formas de pago
+                        disponibles para cada salida.
+                    </p>
+
+                </article>
+
+
+                <article class="benefit">
+
+                    <div class="benefit__icon">
+                        ❤️
+                    </div>
+
+                    <h3 class="benefit__title">
+                        Viajá acompañado
+                    </h3>
+
+                    <p class="benefit__text">
+                        Estamos cerca para acompañarte antes,
+                        durante y después de tu viaje.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             DESTINOS
+        =============================== -->
+
+        <section class="destinations" id="destinos">
+
+            <div class="section-header">
+
+                <span class="section-header__eyebrow">
+                    DESCUBRÍ NUEVOS LUGARES
+                </span>
+
+                <h2 class="section-header__title">
+                    Destinos que te esperan
+                </h2>
+
+            </div>
+
+
+            <div class="destinations-grid">
+
+                <a href="#" class="destination-card destination-card--large">
+
+                    <img src="./img/viajes/bariloche.jpg"
+                        alt="Bariloche">
+
+                    <div class="destination-card__overlay">
+
+                        <span>
+                            Argentina
+                        </span>
+
+                        <h3>
+                            Bariloche
+                        </h3>
+
+                    </div>
+
+                </a>
+
+
+                <a href="#" class="destination-card">
+
+                    <img src="./img/viajes/cataratas.jpg"
+                        alt="Cataratas del Iguazú">
+
+                    <div class="destination-card__overlay">
+
+                        <span>
+                            Argentina
+                        </span>
+
+                        <h3>
+                            Cataratas
+                        </h3>
+
+                    </div>
+
+                </a>
+
+
+                <a href="#" class="destination-card">
+
+                    <img src="./img/viajes/camboriu.jpg"
+                        alt="Camboriú">
+
+                    <div class="destination-card__overlay">
+
+                        <span>
+                            Brasil
+                        </span>
+
+                        <h3>
+                            Camboriú
+                        </h3>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CTA CONTACTO
+        =============================== -->
+
+        <section class="contact-cta" id="contacto">
+
+            <div class="contact-cta__content">
+
+                <span class="contact-cta__eyebrow">
+                    ¿TENÉS UN VIAJE EN MENTE?
+                </span>
+
+                <h2 class="contact-cta__title">
+                    Hablemos de tu próximo destino.
+                </h2>
+
+                <p class="contact-cta__text">
+                    Contanos qué estás buscando y te ayudamos
+                    a encontrar la mejor opción.
+                </p>
+
+                <a href="#contacto"
+                    class="button button--light">
+                    Quiero consultar
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
-    
-    <footer class="bg-dark text-light text-center py-3">
-        <nav>
-            <ul class="list-unstyled d-flex justify-content-center mb-2">
-                <li class="mx-3"><a class="text-light" href="./index.html">Inicio</a></li>
-                <li class="mx-3"><a class="text-light" href="./pages/productos.html">Productos</a></li>
-                <li class="mx-3"><a class="text-light" href="./pages/nosotros.html">Nosotros</a></li>
-                <li class="mx-3"><a class="text-light" href="./pages/contactos.html">Contacto</a></li>
-                <li class="mx-3"><a class="text-light" href="./pages/carrito.html">Carrito</a></li>
-            </ul>
-        </nav>
-        <p class="mb-0">&copy; 2025 The Urban Clothes - Todos los derechos reservados</p>
-        <a href="https://www.instagram.com/ignacio.barrionuevo26/" target="_blank" class="text-light">Síguenos en Instagram</a>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="footer">
+
+        <div class="footer__container">
+
+
+            <div class="footer__brand">
+
+                <img src="./img/logo/logo.png"
+                    alt="Electro Turismo">
+
+                <p>
+                    Tu próximo viaje empieza acá.
+                </p>
+
+            </div>
+
+
+            <div class="footer__links">
+
+                <h3>
+                    Navegación
+                </h3>
+
+                <a href="#top">
+                    Inicio
+                </a>
+
+                <a href="./pages/viajes.html">
+                    Viajes
+                </a>
+
+                <a href="#destinos">
+                    Destinos
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer__contact">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    General Pico, La Pampa
+                </p>
+
+                <a href="#">
+                    WhatsApp
+                </a>
+
+                <a href="https://www.instagram.com/electroturismolapampa?igsh=Mm9tNmpncThhZmNr&igsi=Mm9tNmpncThhZmNr&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer__bottom">
+
+            <p>
+                © 2026 Electro Turismo. Todos los derechos reservados.
+            </p>
+
+        </div>
+
     </footer>
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
