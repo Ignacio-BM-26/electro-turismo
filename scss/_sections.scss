@@ -293,7 +293,9 @@
   border-radius: variables.$border-radius;
   box-shadow: variables.$shadow-card;
 
-  &--reverse .travel-detail__image { order: 2; }
+  &--reverse .travel-detail__image {
+    order: 2;
+  }
 
   &__image {
     min-height: 380px;
@@ -313,34 +315,53 @@
     justify-content: center;
   }
 
+
+  &__content {
+    padding: clamp(28px, 4vw, 44px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
   &__country {
     color: variables.$color-accent;
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 1.5px;
   }
 
   h2 {
-    margin: 12px 0 16px;
+    margin: 10px 0 12px;
     color: variables.$color-primary;
-    font-size: clamp(1.8rem, 3vw, 2.55rem);
+    font-size: clamp(1.7rem, 2.5vw, 2.2rem);
   }
 
   p {
     color: variables.$color-gray;
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
   &__features {
-    margin: 25px 0 30px;
+    margin: 20px 0 24px;
     display: grid;
-    gap: 12px;
+    gap: 9px;
     color: variables.$color-primary;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.88rem;
+    line-height: 1.45;
 
-    li { padding-left: 22px; position: relative; }
-    li::before { content: "✓"; position: absolute; left: 0; color: variables.$color-accent; font-weight: 800; }
+    li {
+      padding-left: 22px;
+      position: relative;
+    }
+
+    li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: variables.$color-accent;
+      font-weight: 800;
+    }
   }
 }
 

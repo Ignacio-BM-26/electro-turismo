@@ -500,28 +500,35 @@ ol {
   align-items: flex-start;
   justify-content: center;
 }
+.travel-detail__content {
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
 .travel-detail__country {
   color: #007bff;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 1.5px;
 }
 .travel-detail h2 {
-  margin: 12px 0 16px;
+  margin: 10px 0 12px;
   color: #172e44;
-  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
 }
 .travel-detail p {
   color: #667085;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 .travel-detail__features {
-  margin: 25px 0 30px;
+  margin: 20px 0 24px;
   display: grid;
-  gap: 12px;
+  gap: 9px;
   color: #172e44;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 .travel-detail__features li {
   padding-left: 22px;
