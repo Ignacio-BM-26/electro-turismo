@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ignacio-bm-26.github.io/Proyecto-ignaciobm/sitemap.xml
